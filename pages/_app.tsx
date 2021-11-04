@@ -26,9 +26,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <PageLayout>
-        <Component {...pageProps} />
-      </PageLayout>
+      <MsalProvider instance={msalApp}>
+        <PageLayout>
+          <Component {...pageProps} />
+        </PageLayout>
+      </MsalProvider>
     </>
   )
 }

@@ -1,6 +1,6 @@
 export const msalConfig = {
     auth: {
-        clientId: process.env.NEXT_PUBLIC_MSAL_CLIENT_ID,
+        clientId: process.env.NEXT_PUBLIC_MSAL_CLIENT_ID ?? '',
         authority: process.env.NEXT_PUBLIC_MSAL_AUTHORITY,
         redirectUri: process.env.NEXT_PUBLIC_HOSTNAME ?? process.env.HOSTNAME,
         navigateToLoginRequestUrl: false
